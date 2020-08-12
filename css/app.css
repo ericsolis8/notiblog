@@ -1,0 +1,23 @@
+.icon-user:hover {
+    box-shadow: 1px 1px 14px rgb(32, 187, 66);
+}
+.icon-var:hover {
+    color: rgb(32, 187, 66);
+}
+
+#contenedor-noticias {
+    /* display: flex; */
+    justify-content: space-evenly;
+}
+.noticia {
+    background: #97929226;
+    border: 1px solid rgba(126, 125, 125, 0.335);
+}
+
+@media only screen and (max-width: 300px) {
+    .noticia {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }

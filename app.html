@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomameserick</title>
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- Bootstrapp -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app" class="container mt-1">
+        <navbar></navbar>
+        <asidex></asidex>
+        <template>
+            <div id="contenedor-noticias">
+            <div class="noticia card-body" v-for="noticia in noticias">
+                <h5 class="card-title">{{noticia.titulo}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{noticia.subtitulo}}</h6>
+                <p class="card-text">{{noticia.texto}}</p>
+                <a href="" class="card-link">Leer más</a>
+            </div>
+            </div>
+        </template>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="navbar.js"></script>
+<script src="asidex.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            noticias: [
+                {titulo:"Surface Duo: el smartphone de Microsoft con Android y doble pantalla llegará en septiembre, estos son sus precio y características",
+                subtitulo: "Microsoft ha regresado al mercado de los telefonos inteligentes",
+                texto:"Casi un año ha pasado desde que Microsoft presentó el Surface Duo, la versión pequeña del Surface Neo, y a pesar de que la espera ha sido larga, ahora por fin sabemos cuándo llegara al mercado. El Microsoft Surface Duo llegará el 10 de septiembre, comenzando en 1,399 dólares. De hecho, la preventa ha comenzado en Estados Unidos, en tiendas AT&T, BestBuy y la tienda en línea de Microsoft."},
+
+                {titulo:"Calderón, Peña y Videgaray tendrán que declarar por sobornos; quisiera ver video de Lozoya: AMLO",
+                subtitulo: "Aunque el presidente insistió en que se necesitaría una consulta ciudadana para juzgar a exmandatarios, aclaró que a él no le corresponde detener un proceso judicial.",
+                texto: "Los expresidentes Felipe Calderón y Enrique Peña Nieto, así como el exsecretario de Hacienda, Luis Videgaray, y los demás involucrados en la denuncia del exdirector de Petróleos Mexicanos (Pemex), Emilio Lozoya, tendrán que ser citados a declarar, indicó el presidente Andrés Manuel López Obrador. Durante la conferencia matutina, explicó que esto es por procedimiento y que no necesariamente significa que sean responsables de los señalamientos contra ellos, ya que Lozoya Austin está obligado a dar pruebas de su acusación."},
+
+                {titulo:"López-Gatell señaló que la vacuna rusa contra el coronavirus no es confiable y no debería ser usada", subtitulo: "Recordó que detrás de las farmaceúticas hay intereses comerciales; garantizó que se presentarán más casos de países o laboratorios que aseguren tener la vacuna contra el COVID-19",
+                texto: "El subsecretario de Prevención y Promoción de la Salud, Hugo López-Gatell, dijo estar sorprendido ante la noticia de que Rusia tiene lista la vacuna contra el coronavirus (COVID-19), puesto que ni siquiera figuraba en la lista de los países o farmacéuticas que estuvieran ensayando la Fase 3 de efectividad.“Nos ha sorprendido, sorprendió a la Organización Mundial de la Salud (OMS), conocer de la vacuna rusa, cuando hasta donde llegaba la información pública mundial, no habían llegado hasta la Fase 3”, señaló esta tarde desde la conferencia vespertina en Palacio Nacional."},
+            ],
+        },
+        methods: {
+
+        },
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
